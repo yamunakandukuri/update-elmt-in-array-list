@@ -1,0 +1,31 @@
+import java.util.*;
+public class update
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n;
+ArrayList<Integer>x=new ArrayList<Integer>();
+System.out.println("enter the size of list");
+ n=sc.nextInt();
+for(int i=0;i<n;i++)
+{
+x.add(sc.nextInt());
+}
+System.out.println("list is"+x);
+System.out.println("Enter value in array:");
+int r=sc.nextInt();
+if(x.contains(r))
+{
+System.out.println("enter value to be updated :");
+int u=sc.nextInt();
+int v=x.indexOf(r);
+x.remove(v);
+x.add(v,u);
+for(Integer i:x)
+System.out.println(i+" ");
+}
+else
+System.out.println("false");
+}
+}
